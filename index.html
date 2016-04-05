@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>RDA Software Test</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body onload="loadData()">
+    <form>
+        <div class="section">
+            <fieldset id="1">
+                <div class="row">
+                    <div class="block-50"><span>Client ID</span>
+                        <input type="text" />
+                    </div>
+                    <div class="block-50">
+                        <span>Date of Birth</span>
+                        <input type="date" />
+                    </div>
+                 </div>
+                <div class="row">
+                    <div class="block">
+                        <input type="text" /><br/> 
+                        <span>First Name</span>
+                    </div>
+                    <div class="block">
+                        <input type="text" /><br />
+                        <span>Middle Name</span>
+                    </div>
+                    <div class="block">
+                        <input type="text" /><br />
+                        <span>Last Name</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="block">
+                        <input type="text" /><br/>
+                        <span>Street Address</span>
+                    </div>
+                    <div class="block">
+                        <input type="text" /><br/>
+                        <span>Apt</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <select id="zone"></select><br/>
+                    <span>Zone</span>
+                </div>
+
+                <div class="row">
+                    <div class="block">
+                        <input type="text" /><br />
+                        <span>City</span>
+                    </div>
+                    <div class="block">
+                        <input type="text" /><br />
+                        <span>Zip Code</span>
+                    </div>
+                    <div class="block">
+                        <select id="housing_status"></select><br />
+                        <span>Housing Status</span>
+                    </div>
+                    <div class="block">
+                        <select id="risk_level"></select><br/>
+                        <span>Risk Level</span>
+                    </div>                    
+                </div>
+
+                <div class="row">
+                    <div class="block">
+                        <div class="alias" contenteditable="true">
+                            <div class="row">
+                                <span>Alias:</span>
+                                <input type="text" value="John" />
+                                <input type="text" />
+                            </div>
+                            <div class="row">
+                                <span>Alias:</span>
+                                <input type="text" value="Paul" />
+                                <input type="text" />
+                            </div>
+                            <div class="row">
+                                <span>Alias:</span>
+                                <input type="text" value="George" />
+                                <input type="text" />
+                            </div>
+                            <div class="row">
+                                <span>Alias:</span>
+                                <input type="text" value="Ringo" />
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <button>Add Alias</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="row">
+                    <div class="block">
+                        <select id="race"></select><br/>
+                        <span>Race</span>
+                    </div>
+                    <div class="block">
+                        <select id="ethnicity"></select><br/>
+                        <span>Ethnicity</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="block">
+                        <select id="english_fluency"></select><br/>
+                        <span>English Fluency</span>
+                    </div>
+                    <div class="block">
+                        <select id="home_language"></select><br/>
+                        <span>Home Language</span>
+                    </div>
+                    <div class="block">
+                        <input type="text" /><br/>
+                        <span>Other Language</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="block">
+                        <select id="gender"></select><br />
+                        <span>Gender</span>
+                    </div>
+                    <div class="block">
+                        <select id="lgbt"></select><br />
+                        <span>LGBT</span>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="section">
+            <div class="block-70">
+                <div class="half-block"><span>User</span></div>             <div class="half-block"><select></select></div><br />
+                <div class="half-block"><span>Intake Date</span></div>      <div class="half-block"><input type="date" /></div><br />
+                <div class="half-block"><span>Client Status</span></div>    <div class="half-block"><select id="client_status"></select></div><br />
+                <div class="half-block"><span>Reason For Close</span></div> <div class="half-block"><select id="reason_for_close"></select></div><br />
+                <div class="half-block"><span>Close Date</span></div>       <div class="half-block"><input type="date" /></div><br />
+            </div>
+            <div class="block-30">
+                <button class="special_button">Edit Record</button><br />
+                <button class="special_button">Save Record</button><br />
+                <button class="special_button">Close Record</button><br />
+            </div>
+        </div>
+        <div class="row">
+            <fieldset>
+                <div class="row">
+                    <div class="block">
+                        <select id="education_status"></select><br />
+                        <span>Education Status</span>
+                    </div>
+                    <div class="block">
+                        <select id="current_grade"></select><br />
+                        <span>Curr. Grade</span>
+                    </div>
+                    <div class="block">
+                        <select id="employment_status"></select><br />
+                        <span>Employment Status</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <select id="school"></select><br />
+                    <span>School</span>
+                </div>
+
+                <div class="row">
+                    <div class="block">
+                        <select id="special_need"></select><br />
+                        <span>Special Need</span><br />
+                        <button>Add Special Need</button>
+                    </div>
+                    <div class="block">
+                        <div class="need" contenteditable="true">
+                            <div class="row">
+                                <span>Need:</span>
+                                <select class="specific_need"></select>
+                                <input type="text" />
+                            </div>
+                            <div class="row">
+                                <span>Need:</span>
+                                <select class="specific_need"></select>
+                                <input type="text" />
+                            </div>
+                            <div class="row">
+                                <span>Need:</span>
+                                <select class="specific_need"></select>
+                                <input type="text" />
+                            </div>
+                            <div class="row">
+                                <span>Need:</span>
+                                <select class="specific_need"></select>
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+</form>
+</body>
+</html>
